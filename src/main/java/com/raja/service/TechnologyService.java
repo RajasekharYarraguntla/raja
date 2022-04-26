@@ -16,4 +16,12 @@ public class TechnologyService {
     public List<Technology> findAll() {
         return repository.findAll();
     }
+
+    public Technology save(Technology technology) {
+        return repository.save(technology);
+    }
+
+    public List<Technology> saveAll(List<Technology> technologies) {
+        return repository.saveAll(technologies);
+    }
 }

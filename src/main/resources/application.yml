@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.SQLServerDialect
+  datasource:
+    #SPRING_DATASOURCE_URL environment variable will be something like -> jdbc:sqlserver://MySqlServer\\MyInstance:1433;DatabaseName=MyDbName;
+    url: jdbc:sqlserver://localhost:1433;database=raja
+    username: sa
+    password: Support@123456
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

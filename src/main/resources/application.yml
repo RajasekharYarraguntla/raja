@@ -2,15 +2,15 @@ server:
   port: 8080
 
 spring:
+  datasource:
+    url: jdbc:postgresql://raja.ccvpmnflk8mv.ap-south-1.rds.amazonaws.com:5432/raja
+    username: postgres
+    password: Raja$241
   jpa:
-    database-platform: org.hibernate.dialect.SQLServerDialect
-    show-sql: true
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.SQLServerDialect
-  datasource:
-    #SPRING_DATASOURCE_URL environment variable will be something like -> jdbc:sqlserver://MySqlServer\\MyInstance:1433;DatabaseName=MyDbName;
-    url: jdbc:sqlserver://localhost:1433;database=raja
-    username: sa
-    password: Support@123456
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect

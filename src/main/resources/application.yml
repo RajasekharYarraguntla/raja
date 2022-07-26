@@ -3,8 +3,8 @@ server:
 
 spring:
   datasource:
-    url: jdbc:sqlserver://raja-dev.database.windows.net:1433;database=raja
-    username: raja@raja-dev
+    url: jdbc:sqlserver://raja-dev-db.database.windows.net:1433;database=raja
+    username: raja@raja-dev-db
     password: Evoke@123456
   jpa:
     hibernate:

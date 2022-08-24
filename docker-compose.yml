@@ -1,7 +1,12 @@
-version: "3"
+version: "3.7"
 
 services:
   raja:
     build: .
     ports:
-      - 80:5000
+      - 80:80
+    volumes:
+      - /app-log/:/log
+
+volumes:
+  app-log:
